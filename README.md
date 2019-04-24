@@ -43,7 +43,10 @@ These directions will be geared a little more towards the Raspberry Pi and Raspb
 	* $ sudo systemctl restart ssh
 	* You should now be able to use the board headless, You can disconnect the keyboard and monitor and SSH in as root
 
-8. **IMPORTANT: Expand File System.** This is a must as most distro images are compacted. If the file system is not expand it is very likely that you will run out of disk space on the partition in the middle of the build process. See minimum SD card requirements above. For instructions on how to expand the file system, read this [knowledge base article](https://openrepeater.com/knowledgebase/topic/expanding-the-file-system).
+8. **IMPORTANT: Expand File System.** This is a must as most distro images are compacted. If the file system is not expand it is very likely that you will run out of disk space on the partition in the middle of the build process. See minimum SD card requirements above.  Raspbian should expand the File System automatically on first boot.  Check available disk space
+	* $ df -h
+	* Look for the / directory. It's Size should be close to the actual size of your SD card and Use% should be less than 50%.
+	* For instructions on how to expand the file system, read this [knowledge base article](https://openrepeater.com/knowledgebase/topic/expanding-the-file-system).
 
 #### How to Use: 
 * Boot up your board and login as root
